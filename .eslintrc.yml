@@ -1,0 +1,32 @@
+---
+  root: true
+  extends: airbnb
+  plugins:
+  # - react
+  - jest
+  - prettier
+  rules:
+    strict: off
+    max-len: ["error", 120]
+    no-underscore-dangle: off #allow for 'private' methods and lodash
+    max-depth: error
+    complexity: error
+    max-lines: warn
+    max-statements: off
+    max-statements-per-line: error
+    class-methods-use-this: off
+    new-cap: ["error", { "newIsCap": false }]
+    # TODO remove this
+    prefer-promise-reject-errors: off
+    arrow-parens: ['error', 'always']
+    no-multiple-empty-lines: [ 'error', {max: 1 }]
+    # quotes: ['error', 'single']
+
+    react/react-in-jsx-scope: off # Allow return of JSX without inherit React.Component
+    react/jsx-filename-extension: off
+    react/destructuring-assignment: [ 'warn', 'always' ]
+    react/prop-types: ['warn']
+
+  env:
+    jest/globals: true
+
