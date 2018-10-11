@@ -1,8 +1,9 @@
 ---
   root: true
+  parser: babel-eslint
   extends: airbnb
   plugins:
-  # - react
+  - react
   - jest
   - prettier
   rules:
@@ -20,12 +21,12 @@
     prefer-promise-reject-errors: off
     arrow-parens: ['error', 'always']
     no-multiple-empty-lines: [ 'error', {max: 1 }]
-    # quotes: ['error', 'single']
 
     react/react-in-jsx-scope: off # Allow return of JSX without inherit React.Component
     react/jsx-filename-extension: off
     react/destructuring-assignment: [ 'warn', 'always' ]
     react/prop-types: ['warn']
+    react/forbid-prop-types: off
 
   env:
     jest/globals: true
